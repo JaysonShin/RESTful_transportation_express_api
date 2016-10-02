@@ -72,7 +72,7 @@ var PassengerSchema   = new Schema({
     phoneNumber: {
         type: Number,
         trim: true,
-        validate: /[0-9]{3}\-[0-9]{3}\-[0-9]{4}/
+        validate: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
     },
     paymentAccount: { 
         type: Schema.Types.ObjectId, 
