@@ -65,7 +65,7 @@ var DriverSchema   = new Schema({
         trim: true,
         required: true,
         validate: function(val){ 
-            var re = /[0-9]{3}+\-[0-9]{3}+\-[0-9]{4}/;
+            var re = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
             return re.test(val);
         },
     },
