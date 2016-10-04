@@ -207,26 +207,26 @@ router.route('/drivers/:driver_id')
      * @throws Mongoose Database Error (500 Status Code)
      */
     .patch(function (req, res) {
-        if (typeof req.body.firstName === 'undefined') {
-            res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "firstName"), "statusCode": "422" });
-            return;
-        }
-        if (typeof req.body.lastName === 'undefined') {
-            res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "lastName"), "statusCode": "422" });
-            return;
-        }
-        if (typeof req.body.username === 'undefined') {
-            res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "username"), "statusCode": "422" });
-            return;
-        }
-        if (typeof req.body.emailAddress === 'undefined') {
-            res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "emailAddress"), "statusCode": "422" });
-            return;
-        }
-        if (typeof req.body.password === 'undefined') {
-            res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "password"), "statusCode": "422" });
-            return;
-        }
+        // if (typeof req.body.firstName === 'undefined') {
+        //     res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "firstName"), "statusCode": "422" });
+        //     return;
+        // }
+        // if (typeof req.body.lastName === 'undefined') {
+        //     res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "lastName"), "statusCode": "422" });
+        //     return;
+        // }
+        // if (typeof req.body.username === 'undefined') {
+        //     res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "username"), "statusCode": "422" });
+        //     return;
+        // }
+        // if (typeof req.body.emailAddress === 'undefined') {
+        //     res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "emailAddress"), "statusCode": "422" });
+        //     return;
+        // }
+        // if (typeof req.body.password === 'undefined') {
+        //     res.status(422).json({ "errorCode": "1002", "errorMessage": util.format("Missing required parameter %s", "password"), "statusCode": "422" });
+        //     return;
+        // }
 
         Driver.findById(req.params.driver_id, function (err, driver) {
             if (err) {
